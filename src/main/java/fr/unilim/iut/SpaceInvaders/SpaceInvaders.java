@@ -17,13 +17,13 @@ public class SpaceInvaders {
 	   }
 
 	    public void positionnerUnNouveauVaisseau(int x, int y) {
-	    	
-	    	if (x >= longueur)
-	    		throw new HorsEspaceJeuException("Vous êtes en dehors de l'espace jeu");
-	    	
-	    	vaisseau = new Vaisseau(x, y);
+			
+			if (  ((x<0) || (x >= longueur))  || ((y<0) || (y >= hauteur)) )
+				throw new HorsEspaceJeuException("Vous êtes en dehors de l'espace jeu");
+		
+			vaisseau = new Vaisseau(x, y); 
 
-	    }
+		}
 	    
 	    @Override
 		public String toString() {
