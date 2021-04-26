@@ -3,6 +3,8 @@ package fr.unilim.iut.SpaceInvaders;
     import static org.junit.Assert.assertEquals;
     import org.junit.Test;
 
+import fr.unilim.iut.SpaceInvaders.utils.HorsEspaceJeuException;
+
     public class SpaceInvadersTest {
 	
 	   @Test

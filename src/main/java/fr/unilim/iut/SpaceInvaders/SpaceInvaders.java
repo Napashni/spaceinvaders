@@ -1,6 +1,8 @@
    package fr.unilim.iut.SpaceInvaders;
-  
-    public class SpaceInvaders {
+
+import fr.unilim.iut.SpaceInvaders.utils.HorsEspaceJeuException;
+
+public class SpaceInvaders {
 
 	    private static final char MARQUE_FIN_LIGNE = '\n';
 		private static final char MARQUE_VIDE = '.';
