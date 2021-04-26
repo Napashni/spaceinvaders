@@ -37,5 +37,11 @@ package fr.unilim.iut.SpaceInvaders;
 			"...............\n" + 
 			".......V.......\n" , spaceinvaders.toString());
 		}
+	   
+	   @Test(expected = HorsEspaceJeuException.class)
+		public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropADroite_UneExceptionEstLevee() throws Exception {
+			SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
+			spaceinvaders.positionnerUnNouveauVaisseau(15,9);
+		}
 
-       }
+    }
