@@ -71,7 +71,7 @@ package fr.unilim.iut.SpaceInvaders;
 			}				
 		}
 	   
-	   //Quatrième Test
+	   //Test déplcement vers la droite
 	   @Test
 		public void test_VaisseauAvance_DeplacerVaisseauVersLaDroite() {
 			
@@ -92,7 +92,7 @@ package fr.unilim.iut.SpaceInvaders;
 			"........V......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 		}
 	   
-	   //Cinquième Test
+	   //Test limite déplacement vers la droite
 	   @Test
 		public void test_VaisseauImmobile_DeplacerVaisseauVersLaDroite() {
 			
@@ -111,6 +111,48 @@ package fr.unilim.iut.SpaceInvaders;
 			"...............\n" + 
 			"...............\n" + 
 			"..............V\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+		}
+	   
+	   //Test déplacement vers la gauche
+	   @Test
+		public void test_VaisseauAvance_DeplacerVaisseauVersLaGauche() {
+			
+			spaceinvaders.positionnerUnNouveauVaisseau(7,9);
+
+			spaceinvaders.deplacerVaisseauVersLaGauche();
+			
+			assertEquals("" + 
+			"...............\n" + 
+			"...............\n" +
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"......V........\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+		}
+	   
+	   //Test limite déplacement vers la gauche
+	   @Test
+		public void test_VaisseauImmobile_DeplacerVaisseauVersLaGauche() {
+			
+			spaceinvaders.positionnerUnNouveauVaisseau(0,9);
+
+			spaceinvaders.deplacerVaisseauVersLaGauche();
+			
+			assertEquals("" + 
+			"...............\n" + 
+			"...............\n" +
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"V..............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 		}
 
     }
