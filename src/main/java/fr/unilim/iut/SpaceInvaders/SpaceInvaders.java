@@ -27,11 +27,6 @@ public class SpaceInvaders {
 		private boolean estDansEspaceJeu(int x, int y) {
 			return ((x >= 0) && (x < longueur)) && ((y >= 0) && (y < hauteur));
 		}
-	    
-	    @Override
-		public String toString() {
-			return recupererEspaceJeuDansChaineASCII();
-		}
 
 		public String recupererEspaceJeuDansChaineASCII() {
 			StringBuilder espaceDeJeu = new StringBuilder();
